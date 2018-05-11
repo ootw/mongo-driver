@@ -1,0 +1,33 @@
+{"startTime":{"$gt":1525017600000},"endTime":{"$lt":1525103999000},"content":"live/6503.flv"}
+{"startTime":{"$gt":1525017600000},"endTime":{"$lt":1525103999000},"content":"live/6503.m3u8"}
+{"startTime":{"$gt":1525017600000},"endTime":{"$lt":1525103999000},"content":"live/5983.flv"}
+{"startTime":{"$gt":1525017600000},"endTime":{"$lt":1525103999000},"content":"live/5903.m3u8"}
+
+{"playtime":{"$gt":1525017600000,"$lt":1525103999000},"content":"live/6503.flv"}
+{"playtime":{"$gt":1525017600000,"$lt":1525103999000},"content":"live/6503.m3u8"}
+{"playtime":{"$gt":1525017600000,"$lt":1525103999000},"content":"live/5983.flv"}
+{"playtime":{"$gt":1525017600000,"$lt":1525103999000},"content":"live/5903.m3u8"}
+
+2018-04-30 00:00:00 1525017600000
+2018-04-30 23:59:59 1525103999000
+
+bson.M{"startTime": bson.M{"$gt": 1525017600000}, "endTime": bson.M{"$lt": 1525103999000}, "content": "live/6503.flv"}
+bson.M{"playtime": bson.M{"$gt": 1525017600000, "$lt": 1525103999000}, "content": "live/6503.flv"}
+bson.M{"playtime": bson.M{"$gt": 1525017600000, "$lt": 1525103999000}, "content": "live/6503.m3u8"}
+bson.M{"playtime": bson.M{"$gt": 1525017600000, "$lt": 1525103999000}, "content": "live/5983.flv"}
+bson.M{"playtime": bson.M{"$gt": 1525017600000, "$lt": 1525103999000}, "content": "live/5903.m3u8"}
+
+redcdn.exe logpath=. startTime=1525017600000 endTime=1525103999000 content=live/6503.flv
+
+POST 方式：
+请求地址：
+http://stat.homecdn.com:8080/liveAnalysis/all/liveCountWithPretreat
+请求参数方式：application/x-www-form-urlencoded
+参数列表（建议时间间隔1分钟）：
+startTime（long）、endTime（long）、service（固定值all）
+
+
+1525680900000 2018-05-07 16:15:00
+1525681200000 2018-05-07 16:20:00
+
+{"playtime":{"$gt":1525680900000,"$lt":1525681200000}}
